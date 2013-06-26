@@ -3,13 +3,14 @@
 <beans>
     <bean id="hello" class="org.geoserver.hellorest.HelloResource"/>
     <bean id="helloMap" class="org.geoserver.hellorest.HelloMapResource"/>
+    <bean id="helloReflective" class="org.geoserver.hellorest.HelloReflectiveResource"/>
 
     <bean id="helloMapping" class="org.geoserver.rest.RESTMapping">
         <property name="routes">
             <map>
                 <entry>
                     <key><value>/hello.{format}</value></key>
-                    <value>helloMap</value>
+                    <value>helloReflective</value>
                 </entry>
             </map>
         </property>
