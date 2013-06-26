@@ -1,0 +1,17 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean id="hello" class="org.geoserver.hellorest.HelloResource"/>
+
+    <bean id="helloMapping" class="org.geoserver.rest.RESTMapping">
+        <property name="routes">
+            <map>
+                <entry>
+                    <key><value>/hello.{format}</value></key>
+                    <value>hello</value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+</beans>
