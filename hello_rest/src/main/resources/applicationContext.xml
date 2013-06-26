@@ -2,13 +2,14 @@
 
 <beans>
     <bean id="hello" class="org.geoserver.hellorest.HelloResource"/>
+    <bean id="helloMap" class="org.geoserver.hellorest.HelloMapResource"/>
 
     <bean id="helloMapping" class="org.geoserver.rest.RESTMapping">
         <property name="routes">
             <map>
                 <entry>
                     <key><value>/hello.{format}</value></key>
-                    <value>hello</value>
+                    <value>helloMap</value>
                 </entry>
             </map>
         </property>
